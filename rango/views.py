@@ -12,7 +12,7 @@ def index(request):
     return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    context_dict = {'boldmessage': "Robbie Thomson"}
+    context_dict = {'RT': "This tutorial has been put together by Robbie Thomson"}
 
     # Return a rendered response to send to the client.
     # We make use of the shortcut function to make our lives easier.
