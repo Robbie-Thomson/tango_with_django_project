@@ -19,12 +19,6 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 
-print(BASE_DIR)
-print(TEMPLATE_DIR)
-print(STATIC_DIR)
-print(MEDIA_DIR)
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
