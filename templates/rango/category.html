@@ -9,24 +9,24 @@
     <body>
         <div>
 
-        {% if category%}
-            <h1>{{ category.name}}</h1>
+            {% if category%}
+                <h1>{{ category.name}}</h1>
 
-            {% if pages %}
-                <ul>
+                {% if pages %}
+                    <ul>
 
-                {% for page in pages %}
-                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endfor% }
+                    {% for page in pages %}
+                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor% }
 
-                </ul>
+                    </ul>
+                {% else %}
+                    <strong>No pages currently in catrgory.</strong>
+                {% endif %}
+
             {% else %}
-                <strong>No pages currently in catrgory.</strong>
+                The specified category does not exist!
             {% endif %}
-
-        {% else %}
-            The specifiedcategory does not exist!
-        {% endid %}
         </div>
     </body>
 
