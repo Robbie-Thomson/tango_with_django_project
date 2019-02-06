@@ -29,7 +29,6 @@
 
         <div>
             <ul>
-                <li><a href="{% url 'add_category' %}">Add New Category</a></li>
                 
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'add_category' %}">Add a New Category</a></li>
