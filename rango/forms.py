@@ -20,15 +20,14 @@ class PageForm(forms.ModelForm):
     views = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
 
     class Meta:
-        # Provide an association between the ModelForm and a model
         model = Page
-        fields = ('category',)
+        exclude = ('category',)
 
     def clean(self):
         cleaned_data = self.cleaned_data
         url = cleaned_data.get('url')
 
-        if url and not url.startwitch('http://'):
+        if url and not url.startswith('http://'):
             url = "http://" + url
             cleaned_data["url"] = url
 
